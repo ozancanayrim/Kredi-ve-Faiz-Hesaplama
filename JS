@@ -1,0 +1,15 @@
+let amountInput = (document.querySelector("#amount"));
+let selectAnnuity = document.querySelector("#select");
+let calculateButton = document.querySelector("#btn");
+
+function getPayment(){
+    calculateButton.addEventListener("click", (event) => {
+        let getPayment = Number(amountInput.value) + (0.1 * amountInput.value);
+        let annuity = getPayment / selectAnnuity.value
+        document.querySelector("#result").value = (annuity)  
+        
+        event.preventDefault()
+    })
+}
+
+getPayment();
