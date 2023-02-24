@@ -6,7 +6,7 @@ function getPayment(){
     calculateButton.addEventListener("click", (event) => {
         let getPayment = Number(amountInput.value) + (0.1 * amountInput.value);
         let annuity = getPayment / selectAnnuity.value
-        document.querySelector("#result").value = (annuity)  
+        document.querySelector("#result").value = (annuity.toFixed(2))  
         
         event.preventDefault()
     })
